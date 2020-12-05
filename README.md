@@ -10,13 +10,12 @@ TO DO:
 
 
 ## Git Commands
-Git workflow:
+Local Git Workflow:
+>Write Code --> Stage Changes <git add .> --> Commit Changes <git commit -m ""> --> Push Change <git push>
 
-Local
-Write Code --> Stage Changes <git add .> --> Commit Changes <git commit -m ""> --> Push Change <git push>
 
-git clone = copy from host
-git add = track files changes in git
-git commit = save files in git
-git push = upload git files to repo (GitHub)
-git pull = download changes form remote repo to local host
+- git clone = copy from host
+- git add = track files changes in git
+- git commit = save files in git
+- git push = upload git files to repo (GitHub)
+- git pull = download changes form remote repo to local host
