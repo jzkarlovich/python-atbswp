@@ -11,6 +11,7 @@ TO DO:
 
 ## Git Commands
 Local Git Workflow:
+
 Write Code --> Stage Changes 'git add .' --> Commit Changes 'git commit -m ""' --> Push Change 'git push'
 
 
