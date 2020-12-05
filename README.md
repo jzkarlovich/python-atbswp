@@ -6,7 +6,7 @@ TO DO:
 1. Figure out how to write Python in visual studio. 
 2. Create Subsections for each chapter. Notes will be store in .txt files. 
 3. Create virtual environments to write code and keep packages seperate from global interpreter. 
-4. Is ther a way to auto set .ssh passphrase for git? 
+4. ~~Is ther a way to auto set .ssh passphrase for git?~~ 
 5. Set LaTeX typesetting in Visual Studio and convert .md files (or readme files to LaTeX)
 6. Look to add Vim settings to visual studio for writing and editing. 
 
