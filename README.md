@@ -6,3 +6,16 @@ TO DO:
 1. Figure out how to write Python in visual studio. 
 2. Create Subsections for each chapter. Notes will be store in .txt files. 
 3. Create virtual environments to write code and keep packages seperate from global interpreter. 
+
+
+## Git Commands
+Git workflow:
+
+Local
+Write Code --> Stage Changes <git add .> --> Commit Changes <git commit -m ""> --> Push Change <git push>
+
+git clone = copy from host
+git add = track files changes in git
+git commit = save files in git
+git push = upload git files to repo (GitHub)
+git pull = download changes form remote repo to local host
