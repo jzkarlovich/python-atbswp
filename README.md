@@ -22,3 +22,7 @@ Write Code --> Stage Changes 'git add .' --> Commit Changes 'git commit -m ""' -
 - git commit = save files in git
 - git push = upload git files to repo (GitHub)
 - git pull = download changes form remote repo to local host
+
+
+### Testing Section
+- [] Trying to set ssh passphrase.  Started 'start-ssh-agent' after 'ssh-add'. 
