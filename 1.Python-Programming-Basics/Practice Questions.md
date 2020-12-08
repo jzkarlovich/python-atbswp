@@ -1,6 +1,6 @@
 #Practice Questions
 
-1. Which of the following are operators, and which are values? 
+1. Which of the following are operators, and which are values?   
     `*` = operator  
     `'hello'` = value  
     `-88.8` = value  
@@ -26,13 +26,13 @@
     An expression can be evaluated while a *statement* assigns a value to a variable.  Assignment statements can be used and evaluated in expressions. 
 
 6. What does the variable `bacon` contain after the following code runs? 
-    >`bacon = 20`
+    >`bacon = 20`  
     >`bacon + 1`
   
     `bacon` contains the integer value = 20.  The expression `bacon + 1` evaluates to the integer value of `21`. 
 
 7. What should the following two expressions evaluate to? 
-    >`'spam' + 'spamspam'`
+    >`'spam' + 'spamspam'`  
     >`'spam' * 3`
   
     Line 1 evaluates to the string `'spamspamspam'`.  
