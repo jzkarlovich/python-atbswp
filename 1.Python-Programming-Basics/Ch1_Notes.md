@@ -71,7 +71,14 @@ When the function `print()` is called with no argument passed, a blank line is t
 
 
 ### Len()
-`len()`
+`len()` = When you pass a string to the `len()` function, it evaluates to an integer value of the number of characters in that string. 
+
+**Example**
+Assigment:  `myName = 'zach'`
+Expression: `len(myName)`
+Evaluates:  `4`
+
+The argument, in this case a variable named `myName` is passed to the function `len()`.  When the `len()` function is called with the argument `myName` it evaluates to the integer value of `4` which is the number of characters. 
 
 ### Data Type Functions int(), str(), float()
 `int()`
