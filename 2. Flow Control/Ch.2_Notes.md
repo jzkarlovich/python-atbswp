@@ -55,12 +55,16 @@ The `not` Operator's Truth Table
 Examples:   
 `>>>> 4 > 5             # This expression contains the Boolean operator >, therefore this expression will evaluate to a Boolean value True or False`  
 `False                  # The expression is evaluated and is False.`  
+
 `>>>> 4 < 5 and 5 < 6`  
 `True`  
+
 `>>>> 4 < 5 and 6 > 5`  
 `False`  
+
 `>>>> 1 < 2 or 2 > 1`  
 `True`  
+
 `>>>> 1 == 2 or 2 == 3`  
 `Flase`  
 
@@ -71,7 +75,7 @@ Example:
 `True`  
 
 ## Flow Control Elements
-Flow control statements start with a part called the `condition` and are always followed by a black of code called the *clause*.  
+Flow control statements start with a part called the *condition* and are always followed by a black of code called the *clause*.  
 
 *Conditions* = expressions, the above examples are *conditions*.  Conditions are expressions just specific to flow control statements. Conditions always evaluate down to a Boolean value (`True` or `False`).   
 
