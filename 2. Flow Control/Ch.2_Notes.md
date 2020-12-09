@@ -99,8 +99,8 @@ An `if` statement's clause (the block following the `if` statement) executes if 
 
 The following code and flowchart represents an `if` statement. 
 
->`if name == 'Alice':`  
->`   print('Hi Alice')`  
+    >`if name == 'Alice':`  
+    >`   print('Hi Alice')`  
 
 <p align="center">
     <img src="if_statement_flow.png" />
