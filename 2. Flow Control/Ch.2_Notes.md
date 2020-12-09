@@ -141,5 +141,24 @@ The following code and flowchart represents an `elif` statement.
 
 <p align="center">
     <img src="if_elif_statement_flow.png" />
-</p>
+</p>  
+
+Multiple `elif` statements are represented in the following *vampire flowchart*.  Code can be viewed in the vampire.py file.  
+
+name = 'Carol'
+age = 3000
+if name == 'Alice':
+    print('Hi, Alice.')
+elif age < 12:
+    print('You are not Alice.')
+elif age > 2000:
+    print('Unlike you, Alice is not an undead, immortal vampire.')
+elif age > 100:
+    print('You are not Alice, granny.')
+
+<p align="center">
+    <img src="vampire_flow.png" />
+</p>  
+
+
 
