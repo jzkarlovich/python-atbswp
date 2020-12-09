@@ -99,8 +99,8 @@ An `if` statement's clause (the block following the `if` statement) executes if 
 
 The following code and flowchart represents an `if` statement. 
 
-    >`if name == 'Alice':`  
-    >`   print('Hi Alice')`  
+    if name == 'Alice':  
+       print('Hi Alice')  
 
 <p align="center">
     <img src="if_statement_flow.png" />
@@ -115,10 +115,10 @@ An `if` clause can be followed by and `else` statement.  The `else` clause is on
 
 The following code and flowchart represents an `else` statement.  
 
->`if name == 'Alice':`  
->`  print('Hi Alice')`  
->`else`
->`  print('Hello stranger.')`
+    if name == 'Alice':  
+        print('Hi Alice')  
+    else
+        print('Hello stranger.')
 
 <p align="center">
     <img src="if_else_statement_flow.png" />
