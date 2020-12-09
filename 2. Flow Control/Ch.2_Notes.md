@@ -56,7 +56,7 @@ Examples:
 >    `>>> 4 > 5 # This expression contains the Boolean operator >, therefore this expression will evaluate to a Boolean value True or False`  
 >    `False # The expression is evaluated and is False.`  
 
-    >>> 4 < 5 and 5 < 6`      
+    >>> 4 < 5 and 5 < 6      
     True  
     >>> 4 < 5 and 6 > 5    
     False  
@@ -68,8 +68,9 @@ Examples:
 The Boolean operators have an order of operations just like the math operators do. After math and comparison operators evaluate, Python evaluates the `not` operators first, then the `and` operators, and then the `or` operators. 
 
 Example:  
-`>>>> 2 + 2 == 4 and not 2 + 2 == 5 and 2 * 2 == 2 + 2      # math operators, then comparison operators, then boolean operators (not>and>or)`  
-`True`  
+    >>> 2 + 2 == 4 and not 2 + 2 == 5 and 2 * 2 == 2 + 2  
+    True
+> Math operators, then comparison operators, then boolean operators (`not` > `and` > `or`).    
 
 ## Flow Control Elements
 Flow control statements start with a part called the *condition* and are always followed by a black of code called the *clause*.  
