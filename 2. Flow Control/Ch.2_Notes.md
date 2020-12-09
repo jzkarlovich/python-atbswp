@@ -34,7 +34,7 @@ The `and` Operator's Truth Table
 
 The `or` operator evaluates to `True` if *either* of the two Boolean values is `True`.  
 The `or` Operator's Truth Table
-| Expression | Exvaluates to... |
+| Expression | Evaluates to... |
 |:-----------|:-----------------|
 |`True and True` | `True`   |
 |`True and False`| `True`  |
@@ -44,7 +44,7 @@ The `or` Operator's Truth Table
 ### Unary Operator
 The `not` operator only operates on one Boolean value.  It simple evaluates to the oposite Boolean value.  
 The `not` Operator's Truth Table
-| Expression | Exvaluates to... |
+| Expression | Evaluates to... |
 |:-----------|:-----------------|
 |`not True` | `False`   |
 |`not False`| `True`  |
@@ -93,8 +93,15 @@ An `if` statement's clause (the block following the `if` statement) executes if 
 - The `if` keyword. 
 - A condition (an expression that evaluates to a Boolean value, `True` or `False`)
 - A colon.
-- Starting on the next line, an indented block of code (called a *clause*).  
+- Starting on the next line, an indented block of code (called the `if` *clause*).  
 
 **All flow control statements end with a colon and are followed by a new block of code (the clause)**
 
+![if Statement Flowchart](if_statement_flow.png)
+
 ### *else* Statements
+An `if` clause can be followed by and `else` statement.  The `else` clause is only executed if the `if` statements condition is `False`. In English, "If this condition is true, execute this code. Or else, execute that code." An `else` statement doesn't have a condition. In code, and `else` statement always consists of the following: 
+
+- The `else` keyword. 
+- A colon. 
+- Starting on the next line, an indented block of code (called the `else` clause).
