@@ -213,4 +213,23 @@ The following code and flowchart show an infinite `while` loop with a `break` st
 
 <p align="center">
     <img src="your_name2_flow.png" />
-</p>
+</p>  
+
+### *continue* Statements
+`continue` statements are used within a loop.  When a program reaches the `continue` statement, it jumps back to the start of the loop and reevaluates the condition. See the following code and flow chart for an example.  
+
+    while True:
+        print('Who are you?')
+        name = input()
+        if name != 'Joe':
+            continue
+        print('Hello, Joe. What is the password? (It is a fish)')
+        password = input()
+        if password == 'swordfish':
+            break
+    print('Access granted.')  
+
+<p align="center">
+    <img src="swordfish_flow.png" />
+</p>  
+
