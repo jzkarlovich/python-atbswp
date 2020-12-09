@@ -48,3 +48,49 @@ The `not` Operator's Truth Table
 |:-----------|:-----------------|
 |`not True` | `False`   |
 |`not False`| `True`  |
+
+## Mixing Boolean and Comparison Operators
+`and`, `or`, and `not` are called *Boolean operators* because they always operate on the Boolean values `True` and `False`.  
+
+Examples:   
+`>>>> 4 > 5             # This expression contains the Boolean operator >, therefore this expression will evaluate to a Boolean value True or False`  
+`False                  # The expression is evaluated and is False.`  
+`>>>> 4 < 5 and 5 < 6`  
+`True`  
+`>>>> 4 < 5 and 6 > 5`  
+`False`  
+`>>>> 1 < 2 or 2 > 1`  
+`True`  
+`>>>> 1 == 2 or 2 == 3`  
+`Flase`  
+
+The Boolean operators have an order of operations just like the math operators do. After math and comparison operators evaluate, Python evaluates the `not` operators first, then the `and` operators, and then the `or` operators. 
+
+Example:  
+`>>>> 2 + 2 == 4 and not 2 + 2 == 5 and 2 * 2 == 2 + 2      # math operators, then comparison operators, then boolean operators (not>and>or)`  
+`True`  
+
+## Flow Control Elements
+Flow control statements start with a part called the `condition` and are always followed by a black of code called the *clause*.  
+
+*Conditions* = expressions, the above examples are *conditions*.  Conditions are expressions just specific to flow control statements. Conditions always evaluate down to a Boolean value (`True` or `False`).   
+
+A flow control statement decides what to do based on whether its condition is `True` or `False`, and almost every flow control statement uses a condition. 
+
+*Blocks* of code - is a group of code.  The beginning of a block is denoted when the indentation is increased. There are three rules for blocks:
+ 1. Blocks begin when the indentation increases. 
+ 2. Blocks can contain blocks. 
+ 3. Blocks end when the indentation decreases to zero or to a containing blocks indentation. 
+
+## Flow Control Statements
+### *if* Statements
+An `if` statement's clause (the block following the `if` statement) executes if the condition is `True`.  The clause is skipped if the condition is `False`.  An `if` statement consists of the following: 
+
+- The `if` keyword. 
+- A condition (an expression that evaluates to a Boolean value, `True` or `False`)
+- A colon.
+- Starting on the next line, an indented block of code (called a *clause*).  
+
+**All flow control statements end with a colon and are followed by a new block of code (the clause)**
+
+### *else* Statements
