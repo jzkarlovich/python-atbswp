@@ -15,7 +15,7 @@ They are used in expressions and can be stored in variables.
 | `>=` | greater than or equal to |
 | `<=` | less than or equal to |
 
-NOTE: `==` and `!=` can be used on values of any data type. 
+> NOTE: `==` and `!=` can be used on values of any data type. 
 
 ## Boolean Operators
 There are three Boolean operators used to compare Boolean values. The three operators are `and`, `or`, and `not`. 
@@ -122,4 +122,23 @@ The following code and flowchart represents an `else` statement.
 
 <p align="center">
     <img src="if_else_statement_flow.png" />
+</p>
+
+### *elif* Statements
+An `elif` statement is an "else if" statement that always follows an `if` or another `elif` statement. An `elif` provides another condition to be checked only if all privous conditions where `False`. This allows you to text many possible clauses to execute. An `elif` statement always consists of the following:   
+
+- The `elif` keyword. 
+- A condition (an expression that evaluates to `True` or `False`). 
+- A colon. 
+- Starting on the next line, an indented block of code (called the `elif` clause).  
+
+The following code and flowchart represents an `elif` statement.  
+
+    if name == 'Alice':
+        print('Hi Allice')
+    elif age < 12:
+        print('You are not Alice.') 
+
+<p align="center">
+    <img src="if_elif_statement_flow.png" />
 </p>
