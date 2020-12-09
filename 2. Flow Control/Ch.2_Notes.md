@@ -68,8 +68,10 @@ Examples:
 The Boolean operators have an order of operations just like the math operators do. After math and comparison operators evaluate, Python evaluates the `not` operators first, then the `and` operators, and then the `or` operators. 
 
 Example:  
+
     >>> 2 + 2 == 4 and not 2 + 2 == 5 and 2 * 2 == 2 + 2  
-    True
+    True  
+
 > Math operators, then comparison operators, then boolean operators (`not` > `and` > `or`).    
 
 ## Flow Control Elements
