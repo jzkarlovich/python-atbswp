@@ -281,3 +281,24 @@ The output is:
     6
     8  
 
+## Importing Modules
+An `import` statement consists of the following: 
+- The `import` keyword. 
+- The name of the module. 
+- Optionally, more module names, as long as they are separated by commas.  
+
+Once modules are imported, you can then use the functions of that module. An example is below: 
+
+    import random
+
+    for i in range(5):
+        print(random.randint(1,10))
+
+The output: 
+
+    9
+    4
+    3
+    10
+    6  
+
