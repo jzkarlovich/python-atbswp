@@ -143,8 +143,7 @@ The following code and flowchart represents an `elif` statement.
     <img src="if_elif_statement_flow.png" />
 </p>  
 
-Multiple `elif` statements are represented in the following *vampire flowchart*.  Code can be viewed in the vampire.py file.  
-
+Multiple `elif` statements are represented in the following *vampire flowchart*.  Code can be viewed and executed the vampire.py file.  
     name = 'Carol'
     age = 3000
     if name == 'Alice':
@@ -159,6 +158,25 @@ Multiple `elif` statements are represented in the following *vampire flowchart*.
 <p align="center">
     <img src="vampire_flow.png" />
 </p>  
+
+"If the first condition is ture, do this. Else, if the second condition is true, do that. Otherwise, do something else."  
+
+The order of `elif` statements does matter.  Once a condition is found to be `True` all of the remaining `elif` statements are skipped. At most only one of the clauses will be executed.  One option is to add an `else` statement after the last `elif` statement. This guarentees that at least one (and only one) of the clauses will be executed. 
+
+The following code and flowchart represent an `if` statement that make use of `elif` clause and an `else` clause.  
+
+    name = 'Carol'
+    age = 3000
+    if name == 'Alice':
+        print('Hi, Alice.')
+    elif age < 12:
+        print('You are not Alice.')
+    else:
+        print('You are neither Alice nor a little kid')  
+
+<p align="center">
+    <img src="little_kid_else_flow.png" />
+</p>   
 
 
 
