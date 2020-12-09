@@ -143,4 +143,3 @@ The following code and flowchart represents an `elif` statement.
     <img src="if_elif_statement_flow.png" />
 </p>
 
-TEST
