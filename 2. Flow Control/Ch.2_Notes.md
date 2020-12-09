@@ -233,3 +233,51 @@ The following code and flowchart show an infinite `while` loop with a `break` st
     <img src="swordfish_flow.png" />
 </p>  
 
+### *for loops* and the *range()* Function
+`for` loops allow you to execute a block of code a certiain number of times with the `range()` function.  This is different from a `while` loop where it keeps loops while its condition is `True`.  
+
+`for` statements look like `for i in range(5):` and include the following:  
+- The `for` keyword. 
+- A variable name. 
+- The `in` keyword. 
+- A call to `range()` method with up to three integers passed to it. 
+- A colon. 
+- Starting on the next line, an indented block of code (called the `for` clause).  
+
+Sample code `for` loop: 
+    print('My name is ')
+    for i in range(5):
+        print('Jimmy Five Times (' + str(i) + ')')
+
+### An Equivalent *while* Loop
+    print('My name is')
+    i = 0
+    while i < 5:
+        print('Jimmy Five Times (' + str(i) + ')')
+        i = i + 1  
+
+### *Starting*, *Stopping*, and *Stepping* Arguments to *range()*
+Up to three integers can be passed to the `range()` function as arguments. 
+    for i in range(12, 16):
+        print(i)
+
+The first argument `12` is where the first variable where the `for` loop starts.  The second argument `16` will be up to, but not including, the number to stop at. The output of the code above is:  
+
+    12
+    13
+    14
+    15  
+
+The third argument that can be passed to the `range()` function is the *step argument*.  The first argument is the starting point, the second argument is the stopping point, and the third argument is the amount that the variable is increased by after each iteration. 
+
+    for i in range(0, 10, 2):
+            print(i)
+
+The output is:  
+
+    0
+    2
+    4
+    6
+    8  
+
