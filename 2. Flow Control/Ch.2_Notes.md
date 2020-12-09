@@ -178,5 +178,39 @@ The following code and flowchart represent an `if` statement that make use of `e
     <img src="little_kid_else_flow.png" />
 </p>   
 
+### *while* Loop Statements
+A `while` statement will execute over and over again as long as the statement's condition is `True`.  A `while` statement always consists of the following:  
 
+- The `while` keyword. 
+- A condition (an expression that evaluates to `True` or `False`)
+- A colon
+- Starting on the next line, an indented block of code (called the `while` clause). 
 
+In a `while` loop, the condition is alawys checked at the start of each iteration. If the condition is `True` the clause is executed and then checked again.  If the clause is `False` the `while` clause is skipped.  
+
+The Annoying `while` Loop:
+    name = ''
+    while name != 'your name':
+        print('Please type your name')
+        name = input()
+    print('Thank you.')  
+
+<p align="center">
+    <img src="your_name_flow.png" />
+</p>  
+
+### *break* Statements
+`break` statements allow you to exit out of a `while` statements clause early. 
+
+The following code and flowchart show an infinite `while` loop with a `break` statement in order to get out of it.  
+
+    while True: 
+        print('Please type your name.')
+        name = input()
+        if name == 'your name':
+            break
+    print('Thank you!')  
+
+<p align="center">
+    <img src="your_name2_flow.png" />
+</p>
