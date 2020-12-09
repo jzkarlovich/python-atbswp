@@ -95,7 +95,12 @@ An `if` statement's clause (the block following the `if` statement) executes if 
 - A colon.
 - Starting on the next line, an indented block of code (called the `if` *clause*).  
 
-**All flow control statements end with a colon and are followed by a new block of code (the clause)**
+**All flow control statements end with a colon and are followed by a new block of code (the clause)**  
+
+The following code and flowchart represents an `if` statement. 
+
+>`if name == 'Alice':`  
+>`   print('Hi Alice')`  
 
 <p align="center">
     <img src="if_statement_flow.png" />
@@ -106,4 +111,15 @@ An `if` clause can be followed by and `else` statement.  The `else` clause is on
 
 - The `else` keyword. 
 - A colon. 
-- Starting on the next line, an indented block of code (called the `else` clause).
+- Starting on the next line, an indented block of code (called the `else` clause).  
+
+The following code and flowchart represents an `else` statement.  
+
+>`if name == 'Alice':`  
+>`  print('Hi Alice')`  
+>`else`
+>`  print('Hello stranger.')`
+
+<p align="center">
+    <img src="if_else_statement_flow.png" />
+</p>
