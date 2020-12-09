@@ -53,20 +53,16 @@ The `not` Operator's Truth Table
 `and`, `or`, and `not` are called *Boolean operators* because they always operate on the Boolean values `True` and `False`.  
 
 Examples:   
-`>>>> 4 > 5             # This expression contains the Boolean operator >, therefore this expression will evaluate to a Boolean value True or False`  
-`False                  # The expression is evaluated and is False.`  
-
-`>>>> 4 < 5 and 5 < 6`  
-`True`  
-
-`>>>> 4 < 5 and 6 > 5`  
-`False`  
-
-`>>>> 1 < 2 or 2 > 1`  
-`True`  
-
-`>>>> 1 == 2 or 2 == 3`  
-`Flase`  
+>    `>>> 4 > 5 # This expression contains the Boolean operator >, therefore this expression will evaluate to a Boolean value True or False`  
+>    `False # The expression is evaluated and is False.`
+    >>> 4 < 5 and 5 < 6`  
+    True
+    >>> 4 < 5 and 6 > 5  
+    False
+    >>> 1 < 2 or 2 > 1  
+    True
+    >>> 1 == 2 or 2 == 3  
+    False  
 
 The Boolean operators have an order of operations just like the math operators do. After math and comparison operators evaluate, Python evaluates the `not` operators first, then the `and` operators, and then the `or` operators. 
 
