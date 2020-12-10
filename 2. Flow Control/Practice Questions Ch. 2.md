@@ -56,4 +56,66 @@ not ((5 > 4) or (3 == 5))
 | `<`  | less than |
 | `>`  | greater than |
 | `<=` | less than or equal to |
-| `>=` | greater than or equal to |
+| `>=` | greater than or equal to |  
+
+6.  What is the difference between the equal operator and the assignment operator?   
+
+The `=` assignment operator, assigns a value to a variable.  The `==` is a comparison operator that checks if two assignments are equal to one another and evaluate to the Boolean data type `True` or `False`.  
+
+7. Explain what a condition is and where you would use one?  
+
+A condition is an expression and it evaluates down to a Boolean data type. You would use a condition as a flow control statement in order to define how a program is to continue.  
+
+8. Identify the three blocks in this code:  
+'`' indicates the start of a block. 
+    spam = 0
+    if spam == 10:
+        `print('eggs')
+        if spam > 5:
+            `print('bacon')
+        else:
+            `print('ham')
+        print('spam')
+    print('spam')  
+
+9. Write code that prints 'Hello' if 1 is stored in spam, prints 'Howdy if 2 is stored in 'spam' and prints 'Greetings!' if anything else is stored in spam.  
+    import random
+
+    spam = str(random.randint(1,3))
+    print('Random spam value generated is ' + spam + '.')
+    if spam == '1':
+        print('Hello')
+    elif spam == '2':
+        print('Howdy')
+    else:
+        print('Greetings')  
+
+10. What can you press if your program is stuck in an infinite loop?
+^C  
+
+11. What is the difference between `break` and `continue`? 
+A `break` is used to get out of a loop, while a `continue` loops back to the initial condition. 
+
+12. What is the difference between `range(10)`, `range(0,10)`, and `range(0, 10, 1)` in a for loop?  
+
+The range function has 3 arguments that can be passed to the function `range()`.  Those three arguments are integers that represent the initial value, the final value, and the step argument.  
+
+    range(10) will provide a range of 0 to 9 by 1.  
+    range(0, 10) provide a range of 0 to 9 by 1. 
+    range(0, 10, 1) will provide a range of 0 to 10 by 1. 
+
+    for i in range(10)
+        print(i)
+
+13. Write a short program that prints the numbers 1 to 10 using a for loop. Then write an equivalent program that prints the numbers 1 to 10 using a while loop.  
+
+    # for loop:
+    for i in range(10):
+        print(str(i + 1))
+
+    # while loop equivalent:
+    n = 0
+    while n < 10:
+        for n in range(10):
+            print(str(n + 1))
+        break

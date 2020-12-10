@@ -302,3 +302,4 @@ The output:
     10
     6  
 
+## Ending a Program Early with the *sys.exit()* Function
