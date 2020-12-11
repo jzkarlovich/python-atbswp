@@ -2,11 +2,12 @@
 
 1. What are teh two values of the Boolean data type.  
 
-The two values of the Boolean data type are `True` and `False`. 
+>The two values of the Boolean data type are `True` and `False`. 
 
 2. What are the three Boolean operators? 
-
-    and, or, not
+````python
+and, or, not
+````
 
 3. Truth Tables for Boolean Operators
 
@@ -60,11 +61,11 @@ not ((5 > 4) or (3 == 5))
 
 6.  What is the difference between the equal operator and the assignment operator?   
 
-The `=` assignment operator, assigns a value to a variable.  The `==` is a comparison operator that checks if two assignments are equal to one another and evaluate to the Boolean data type `True` or `False`.  
+>The `=` assignment operator, assigns a value to a variable.  The `==` is a comparison operator that checks if two assignments are equal to one another and evaluate to the Boolean data type `True` or `False`.  
 
 7. Explain what a condition is and where you would use one?  
 
-A condition is an expression and it evaluates down to a Boolean data type. You would use a condition as a flow control statement in order to define how a program is to continue.  
+>A condition is an expression and it evaluates down to a Boolean data type. You would use a condition as a flow control statement in order to define how a program is to continue.  
 
 8. Identify the three blocks in this code:  
 ````python
@@ -91,15 +92,16 @@ elif spam == '2':
 else:
     print('Greetings')  
 ````
-10. What can you press if your program is stuck in an infinite loop?
-^C  
+10. What can you press if your program is stuck in an infinite loop?  
+>^C  
 
-11. What is the difference between `break` and `continue`? 
-A `break` is used to get out of a loop, while a `continue` loops back to the initial condition. 
+11. What is the difference between `break` and `continue`?  
+
+>A `break` is used to get out of a loop, while a `continue` loops back to the initial condition. 
 
 12. What is the difference between `range(10)`, `range(0,10)`, and `range(0, 10, 1)` in a for loop?  
 
-The range function has 3 arguments that can be passed to the function `range()`.  Those three arguments are integers that represent the initial value, the final value, and the step argument.  
+>The range function has 3 arguments that can be passed to the function `range()`.  Those three arguments are integers that represent the initial value, the final value, and the step argument.  
 
 ````python
 range(10) will provide a range of 0 to 9 by 1.  
