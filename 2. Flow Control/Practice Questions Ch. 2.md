@@ -104,9 +104,9 @@ else:
 >The range function has 3 arguments that can be passed to the function `range()`.  Those three arguments are integers that represent the initial value, the final value, and the step argument.  
 
 ````python
-range(10) will provide a range of 0 to 9 by 1.  
-range(0, 10) provide a range of 0 to 9 by 1. 
-range(0, 10, 1) will provide a range of 0 to 10 by 1. 
+range(10) # will provide a range of 0 to 9 by 1.  
+range(0, 10) # provide a range of 0 to 9 by 1. 
+range(0, 10, 1) # will provide a range of 0 to 10 by 1. 
 
 for i in range(10)
     print(i)
