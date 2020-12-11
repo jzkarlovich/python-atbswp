@@ -68,6 +68,7 @@ A condition is an expression and it evaluates down to a Boolean data type. You w
 
 8. Identify the three blocks in this code:  
 '`' indicates the start of a block. 
+````
     spam = 0
     if spam == 10:
         `print('eggs')
@@ -77,8 +78,9 @@ A condition is an expression and it evaluates down to a Boolean data type. You w
             `print('ham')
         print('spam')
     print('spam')  
-
+````
 9. Write code that prints 'Hello' if 1 is stored in spam, prints 'Howdy if 2 is stored in 'spam' and prints 'Greetings!' if anything else is stored in spam.  
+````
     import random
 
     spam = str(random.randint(1,3))
@@ -89,7 +91,7 @@ A condition is an expression and it evaluates down to a Boolean data type. You w
         print('Howdy')
     else:
         print('Greetings')  
-
+````
 10. What can you press if your program is stuck in an infinite loop?
 ^C  
 
@@ -109,13 +111,14 @@ The range function has 3 arguments that can be passed to the function `range()`.
 
 13. Write a short program that prints the numbers 1 to 10 using a for loop. Then write an equivalent program that prints the numbers 1 to 10 using a while loop.  
 
-    for i in range(10):
-        print(str(i + 1))
+````
+for i in range(10):
+    print(str(i + 1))
 
 
-    n = 0
-    while n < 10:
-        for n in range(10):
-            print(str(n + 1))
-        break 
-
+n = 0
+while n < 10:
+    for n in range(10):
+        print(str(n + 1))
+    break 
+````
