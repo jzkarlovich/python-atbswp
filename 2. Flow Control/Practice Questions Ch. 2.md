@@ -67,30 +67,29 @@ The `=` assignment operator, assigns a value to a variable.  The `==` is a compa
 A condition is an expression and it evaluates down to a Boolean data type. You would use a condition as a flow control statement in order to define how a program is to continue.  
 
 8. Identify the three blocks in this code:  
-'`' indicates the start of a block. 
-````
-    spam = 0
-    if spam == 10:
-        `print('eggs')
-        if spam > 5:
-            `print('bacon')
-        else:
-            `print('ham')
-        print('spam')
-    print('spam')  
+````python
+spam = 0
+if spam == 10:
+    print('eggs') #1
+    if spam > 5:
+        print('bacon') #2
+    else:
+        print('ham') #3
+    print('spam')
+print('spam')  
 ````
 9. Write code that prints 'Hello' if 1 is stored in spam, prints 'Howdy if 2 is stored in 'spam' and prints 'Greetings!' if anything else is stored in spam.  
-````
-    import random
+````python
+import random
 
-    spam = str(random.randint(1,3))
-    print('Random spam value generated is ' + spam + '.')
-    if spam == '1':
-        print('Hello')
-    elif spam == '2':
-        print('Howdy')
-    else:
-        print('Greetings')  
+spam = str(random.randint(1,3))
+print('Random spam value generated is ' + spam + '.')
+if spam == '1':
+    print('Hello')
+elif spam == '2':
+    print('Howdy')
+else:
+    print('Greetings')  
 ````
 10. What can you press if your program is stuck in an infinite loop?
 ^C  
@@ -102,16 +101,18 @@ A `break` is used to get out of a loop, while a `continue` loops back to the ini
 
 The range function has 3 arguments that can be passed to the function `range()`.  Those three arguments are integers that represent the initial value, the final value, and the step argument.  
 
-    range(10) will provide a range of 0 to 9 by 1.  
-    range(0, 10) provide a range of 0 to 9 by 1. 
-    range(0, 10, 1) will provide a range of 0 to 10 by 1. 
+````python
+range(10) will provide a range of 0 to 9 by 1.  
+range(0, 10) provide a range of 0 to 9 by 1. 
+range(0, 10, 1) will provide a range of 0 to 10 by 1. 
 
-    for i in range(10)
-        print(i)
+for i in range(10)
+    print(i)
+````
 
 13. Write a short program that prints the numbers 1 to 10 using a for loop. Then write an equivalent program that prints the numbers 1 to 10 using a while loop.  
 
-````
+````python
 for i in range(10):
     print(str(i + 1))
 
