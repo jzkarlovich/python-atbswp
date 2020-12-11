@@ -26,4 +26,4 @@ Write Code --> Stage Changes 'git add .' --> Commit Changes 'git commit -m ""' -
 
 ### Testing Section
 - [X] Trying to set ssh passphrase.  Started 'start-ssh-agent' after 'ssh-add'.
-- [] Test after reboot. 
+- [] Make a change on GitHub and pull. 
