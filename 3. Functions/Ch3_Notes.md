@@ -42,4 +42,33 @@ To *define* a function is to create it. In the example above we define the funct
 
 >The value being passed to a function in a *function call* is an argument. 
 
-The argument `'Al'` is then assigned to the local variable `name`.  Variables that have arguments assigned to them are *parameters*. 
+The argument `'Al'` is then assigned to the local variable `name`.  Variables that have arguments assigned to them are *parameters*.  
+
+# Return Values and Return Statements
+When you call the `len()` function and pass it an argument such as 'Hello', the function call evaluates to the integer value `5`, which is the length of the string you passed it. 
+
+*return value* = the value that a function call evaluates to.  
+
+A `return` statement consists of the following: 
+
+1. The `return` keyword. 
+2. The value or expression that the function should return. 
+
+## The None Value
+`None` is a value which represents the abscence of a value. The `None` value is the only value of the `NoneType` data type. This value-without-a-value can be helpful when you need to store something that won't be confused for a real value in a variable.  One where `None` is used is as the return value of print().
+
+````python
+>>> spam = print('Hello!')
+Hello!
+>>> None == spam
+True
+````
+
+## Keyword Arguments and the *print()* Function
+Most arguments are identified by their position in the function call. For example, `random.randint(1,10)` is different than `random.randint(10,1)`.  The first argument is the low end and the second argument is the high end.  
+
+*keyword arguments* are identified by the keyword put before them in the function call. Keyword arguments are often used for optional parameters. Review examples...
+
+> Some functions have optional keyword arguments that can be specified when the function is called. 
+
+# The Call Stack
