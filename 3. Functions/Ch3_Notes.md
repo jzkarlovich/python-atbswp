@@ -44,7 +44,7 @@ To *define* a function is to create it. In the example above we define the funct
 
 The argument `'Al'` is then assigned to the local variable `name`.  Variables that have arguments assigned to them are *parameters*.  
 
-# Return Values and Return Statements
+## Return Values and Return Statements
 When you call the `len()` function and pass it an argument such as 'Hello', the function call evaluates to the integer value `5`, which is the length of the string you passed it. 
 
 *return value* = the value that a function call evaluates to.  
@@ -71,4 +71,38 @@ Most arguments are identified by their position in the function call. For exampl
 
 > Some functions have optional keyword arguments that can be specified when the function is called. 
 
-# The Call Stack
+## The Call Stack
+The current topic is always at the top of the stack. **Function calls always return to the line mumber they were called from.**
+
+## Local and Global Scope
+- *local scope* = parameters and variables that are assigned in a called function
+- *global scope* = variables assigned outside all functions  
+
+*Scope* can be through of as a container of variables. When a scope is destroyed, all of teh values stored in the scope's variables are forgotten.  There is only one global scope, and it is created when the program begins. When the program terminates, the global scope is destroyed. 
+
+The *local scope* is created whenever a function is called. Any variables assigned in the function exist within the function's local scope. When the function returns, the local scope is destroyed and the variables are forgotten. Scope's matter for several reasons: 
+
+- Code in the global scope, outside of all functions, cannot use any local variables. 
+- However, code in a local scope can access global variables. 
+- Code in a function's local scope cannot use variables in any other local scope. 
+- You can use the same name for different variables if they are in different scopes. That is there can be a local variables named `spam` and a global variable named `spam`. 
+
+It is a bad habbit to rely on global variables as programs get larger and larger. 
+
+### *Local Variables Cannot be used in the Global Scopes
+
+### *Local Scopes Cannot use Variables in Other Local Scopes*
+
+### *Global Variables Can Be Read from a Local Scope*
+
+## The Global Satement
+`global eggs` means that within a function, it refers to the global variable `eggs`.   
+
+**4 Rules to tell whether a variable is in a local scope or a global scope:**
+1. If a variable is being used in the global scope (that is, outside of the functions), then it is always a global variable. 
+2. If there is a `global` statement for that variable in a function, it is a global variable. 
+3. Otherwise, if the variable is used in an assignment statement in the function, it is a local variable. 
+4. But, if the variable is not used in an assignment statement, it is a global variable. 
+
+## Exception Handling
+Getting an *exception* is an error.  Errors can be handled with `try` and `except` clauses.
