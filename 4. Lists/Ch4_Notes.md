@@ -202,3 +202,136 @@ Index 3 in supplies is: binders
 `random.shuffle()` function will reorder the items in a list. This function modifies the list in place rather than returning a new list. 
 
 ## Augmented Assignment Operators
+| Augmented Assignment Statement | Equivalent Assignment Statement |
+|:-------------------------------|:--------------------------------|
+| `spam += 1` | `spam = spam + 1 |
+| `spam -= 1` | `spam = spam - 1 |
+| `spam *= 1` | `spam = spam * 1 |
+| `spam /= 1` | `spam = spam / 1 |
+| `spam %= 1` | `spam = spam % 1 |  
+
+THe `+=` operator can also do string and list concatenation and the `*=` operator can do string and list replication. 
+
+## Methods
+A *method* is the same thing as a function, ecept it is "called on" a value.  Example: a list value is stored in the variable `spam`, you would call the `index()` list method on that list like so, `spam.index('hello')`. 
+
+### *Finding a Value in a List with the index() Method*
+List values have an `index()` method that can be passed a value - and if that value exists in the list, the index of the value is returned. If the value isn't in the list, then Python produces a `ValueError`. 
+
+````python
+>>> spam = ['hello', 'hi', 'howdy', 'heyas']
+>>> spam.index('hello')
+0
+>>> spam.index('heyas')
+3
+>>> spam.index('howdy howdy howdy')
+Traceback (most recent call last):
+  File "<pyshell#31>", line 1, in <module>
+    spam.index('howdy howdy howdy')
+ValueError: 'howdy howdy howdy' is not in list
+````
+
+When there are duplicates of the value in the list, the index of its first appearance is returned. 
+
+### *Adding Values to Lists with the append() and insert() Methods*
+`append()` and `insert()` methods are used to add new values to a list. 
+
+````python 
+>>> spam = ['cat', 'dog', 'bat']
+>>> spam.append('moose')
+>>> spam
+['cat', 'dog', 'bat', 'moose']
+````
+
+The `append()` method adds the argument to the end of the list. The `insert()` method can insert a value at any index in the list. The first argument to `insert()` is the index for the new value, and the second argument is the new value to be inserted. 
+
+````python
+>>> spam = ['cat', 'dog', 'bat']
+>>> spam.insert(1, 'chicken')
+>>> spam
+['cat', 'chicken', 'dog', 'bat']
+````
+
+Methods belong to a single data type.  In the above examples `append()` and `insert()` are methods of the list data type and can be only called on list values, not on other values such as strings or integers. 
+
+````python
+>>> eggs = 'hello'
+>>> eggs.append('world')
+Traceback (most recent call last):
+  File "<pyshell#19>", line 1, in <module>
+    eggs.append('world')
+AttributeError: 'str' object has no attribute 'append'
+>>> bacon = 42
+>>> bacon.insert(1, 'world')
+Traceback (most recent call last):
+  File "<pyshell#22>", line 1, in <module>
+    bacon.insert(1, 'world')
+AttributeError: 'int' object has no attribute 'insert'
+````
+
+### *Removing Values from Lists with the remove() Method*
+The `remove()` method is passed the avlue to be removed from the list it is called on. 
+
+````python
+>>> spam = ['cat', 'bat', 'rat', 'elephant']
+>>> spam.remove('bat')
+>>> spam
+['cat', 'rat', 'elephant']
+````
+
+Attempting to delete a value that does not exist in the list will result in a `ValueError`. If the value appears more than once in the list, only the first instance of that value will be removed. 
+
+**The `del` statement is good to use when you know the index of the value you want to remove from the list. The `remove()` method is useful when you know the value you want to remove from the list.**
+
+### *Sorting the Values in a List with the sort() Method*
+Lists of number values or lists of strings can be sorted with the `sort()` method. 
+
+````python
+>>> spam = [2, 5, 3.14, 1, -7]
+>>> spam.sort()
+>>> spam
+[-7, 1, 2, 3.14, 5]
+>>> spam = ['ants', 'cats', 'dogs', 'badgers', 'elephants']
+>>> spam.sort()
+>>> spam
+['ants', 'badgers', 'cats', 'dogs', 'elephants']
+````
+
+You can pass `True` for the `reverse` keyword argument to have `sort()` sort the values in reverse order. Three things to note about the `sort()` method. 
+
+1. The `sort()` method sorts the list in place. Don't try to capture the return value by writing code like `spam = spam.sort()`
+2. You cannot sort lists that have both number values and strings. 
+3. `sort()` usees "ASCIIbetical order" - that means that uppercase letters come before lowercase letters. The lowercase *a* is sorted *after* the uppercase *Z*. 
+
+````python
+>>> spam = ['Alice', 'ants', 'Bob', 'badgers', 'Carol', 'cats']
+>>> spam.sort()
+>>> spam
+['Alice', 'Bob', 'Carol', 'ants', 'badgers', 'cats']
+````
+
+If you need to sort the values in regular alphabetical order, pass `str.lower` for the `key` keyword argument in the `sort()` method call. 
+
+````python
+>>> spam = ['a', 'z', 'A', 'Z']
+>>> spam.sort(key=str.lower)
+>>> spam
+['a', 'A', 'z', 'Z']
+````
+
+### *Reversing the Values in a List with the reverse() Method* 
+To quickly reverse the order of the items in a list, you can call the `reverse()` list method. 
+
+````python
+>>> spam = ['cat', 'dog', 'moose']
+>>> spam.reverse()
+>>> spam
+['moose', 'dog', 'cat']
+````
+
+Like `sort()`, the `reverse()` list method does not return a list. 
+
+## Example Program: Magic 8 Ball with a List
+See `magic_8_ball2.py`. 
+
+## Sequence Data Types
