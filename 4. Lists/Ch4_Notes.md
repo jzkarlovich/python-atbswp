@@ -335,3 +335,197 @@ Like `sort()`, the `reverse()` list method does not return a list.
 See `magic_8_ball2.py`. 
 
 ## Sequence Data Types
+Strings, like lists, are also represented by ordered sequences of values. A string, `'python'`, can be thought of as a "list" of single text characters. 
+
+````python
+>>> name = 'Zophie'
+>>> name[0]
+'Z'
+>>> name[-2]
+'i'
+>>> name[0:4]
+'Zoph'
+>>> 'Zo' in name
+True
+>>> 'z' in name
+False
+>>> 'p' not in name
+False
+>>> for i in name:
+...     print('* * * ' + i + ' * * *')
+
+* * * Z * * *
+* * * o * * *
+* * * p * * *
+* * * h * * *
+* * * i * * *
+* * * e * * *
+````
+
+### *Mutable and Immutable Data Types*
+Lists and strings are different in an important way.   
+
+**A list value is a *mutable* data type: it can have values added, removed, or changed.**  
+
+**A string value is *immutable* data type: it cannot be changed.**  
+
+Trying to reassign a signle value in a string will result in a `TypeError`.  The proper way to "mutate" a string is to use slicing and concatenation to build a *new* string by copying parts of the hold string. 
+
+````python
+>>> name = 'Zophie a cat'
+>>> new_name = name[0:7] + 'the' + name[8:12]
+>>> name
+'Zophie a cat'
+>>> new_name
+'Zophie the cat'
+````
+
+Mutable vs Immutable is an important distinction with calling functions with mutable arguments vs immutable arguments. 
+
+### *The Tuple Data Type*
+The *tuple* is typed with parentheses, `()`, instead of square brackets. It is almost identical to a list. 
+
+````python
+>>> eggs = ('hello', 42, 0.5)
+>>> eggs[0]
+'hello'
+>>> eggs
+('hello', 42, 0.5)
+>>> eggs[0:2]
+('hello', 42)
+>>> eggs[0:3]
+('hello', 42, 0.5)
+>>> eggs[1:3]
+(42, 0.5)
+>>> len(eggs)
+3
+````
+
+***Tuples* like strings, are immutable.**  Tuples cannot have their values modified, appended, or removed.  
+
+````python
+>>> eggs = ('hello', 42, 0.5)
+>>> eggs[1] = 99
+Traceback (most recent call last):
+  File "<pyshell#5>", line 1, in <module>
+    eggs[1] = 99
+TypeError: 'tuple' object does not support item assignment
+````
+
+The `type()` function can be used to identify the data type of a value.  For the tuple data type, if you have only a single value in the tuple, you indicate that to Python by adding a trailing comma. 
+
+````python
+>>> type(('hello',))
+<class 'tuple'>
+>>> type(('hello'))
+<class 'str'>
+````
+
+Tuples can be used to convey to readers of the code that you do not intend for the values in that sequence to change. If you need an ordered sequence of values that never changes, use a tuple. This can help in optimization of code. 
+
+### *Converting Types with the list() and tuple() Functions*
+The functions `list()` and `tuple()` will return a list and tuple of the values passed to them. 
+
+````python
+>>> tuple(['cat', 'dog', 5])
+('cat', 'dog', 5)
+>>> list(('cat', 'dog', 5))
+['cat', 'dog', 5]
+>>> list('hello')
+['h', 'e', 'l', 'l', 'o']
+````
+
+Notice the `()` and the `[]` in the above example.  Recall that tuples use `()` and lists use `[]`. Converting a tuple to a list is handy when you need a mutable version of a tuple value. 
+
+## References
+Variables are storing references to the computer memory locations where the values are stored. 
+
+````python
+>>> spam = 42
+>>> cheese = spam
+>>> spam = 100
+>>> spam
+100
+>>> cheese
+42
+````
+
+When `42` is assigned to the variable `spam`, what is actaully taking place is that the value `42` is being stored in the computer's memory and storing a *reference* to it in the variable `spam`. When `cheese` is assigned to `spam`, cheese is actually being copied the referece of `spam` which was stored as the value `42`.  At this point, both `spam` and `cheese` reference the value `42`.  When spam is reassigned the value `100`, a new value of `100` is created as the reference to `spam` but the initial reference of `42` was assigned prior to the reassignment.  That is why when `spam` is executed, the value `100` is returned, and when `cheese` is executed a value of `42` is returned.
+
+This doesn't affect the value in `cheese` = Integers are immutable.  
+
+Lists don't work this way becuase lists are mutable. 
+
+````python
+>>> spam = [0,1,2,3,4,5]
+>>> cheese = spam # The reference is being copied, not the list. 
+>>> cheese[1] = 'Hello' # This changes the list value. 
+>>> spam
+[0, 'Hello', 2, 3, 4, 5]
+>>> cheese # The cheese variable refers to the same list. 
+[0, 'Hello', 2, 3, 4, 5]
+````
+
+`Line 1` when you create the list, you assign a reference to it in the `spam` variable. `Line 2` copies only the reference in `spam` to `cheese`, not the list value itself. This means that the value stored in `spam` and `cheese` now both refer to the same list. So when you modify the first element of `cheese`, you are modifying the smae list that `spam` refers to. 
+
+The section in the book as good pictures to represent references. Python variables technically contain references. 
+
+### *Identity and the id() Function*
+All values in Python have a unique identiy that can be obtained with the `id()` function.  
+
+````python
+>>> id('Howdy')
+2900643048944
+````
+
+`'Howdy'` is a string, therefore it is immutable.  This value is stored in memory with the address in bytes `2900643048944`. 
+
+````python
+>>> bacon = 'Hello'
+>>> id(bacon)
+2900643016240
+>>> bacon += 'world!'
+>>> id(bacon)
+2900642320304
+>>> bacon
+'Helloworld!'
+````
+
+Lists can be modified because they are mutable.  The reference will remain the same but the list value will be changed. 
+
+````python
+>>> eggs = ['cat','dog']
+>>> id(eggs)
+2900643175168
+>>> eggs.append('moose')
+>>> id(eggs)
+2900643175168
+>>> eggs = ['bat', 'rat', 'cow']
+>>> id(eggs)
+2900643172736
+````
+
+If two variables refer to the same list, and the list value changes, both variables are affected because they both refer to the same list. The `append()`, `extend()`, `remove()`, `sort()`, `reverse()`, and other list methods modify their lists **in place**. 
+
+### *Passing References*
+References are important for understanding how arguments get passed to functions. When a function is called - the arguments are copied to the parameter variables. For lists - this means a copy of the reference is used for the parameter. 
+
+### *The copy Modules copy() and deepcopy() Functions*
+The `copy` module can be used to retain an original list or dictionary value if their of those values have been modified by a function. `copy.copy()` will make a duplicate copy of a mutable value like a list or dictionary, not just a copy of a reference. 
+
+````python
+>>> import copy
+>>> spam = ['A', 'B', 'C', 'D']
+>>> id(spam)
+2020709622272
+>>> cheese = copy.copy(spam)
+>>> id(cheese)
+2020714764160
+>>> cheese[1] = 42
+>>> spam
+['A', 'B', 'C', 'D']
+>>> cheese
+['A', 42, 'C', 'D']
+````
+
+If the list you need to copy contains lists, then use the `copy.deepcopy()` function instead of `copy.copy()`.  The `deepcopy()` function will copy the inner lsits as well. 
