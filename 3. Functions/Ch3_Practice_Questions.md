@@ -1,8 +1,10 @@
 1. Why are functions advantageous to have in your programs?   
 Functions are advantageous becuase they can make use of local variables and return values that can then be executed on. You can execute a block of code over and over again without having to write it out explicitely. 
 
+> functions reduce the need for duplicate code, making programs shorter, easeier to read, and easier to update. 
+
 2. When does the code in a function execute: when the function is defined or when the function is called?  
-When the function is called. 
+When the function is called not when the function is first defined. 
 
 3. What statement creates a function?  
 A `def` statement. 
