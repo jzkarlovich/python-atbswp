@@ -22,6 +22,7 @@ Write Code --> Stage Changes 'git add .' --> Commit Changes 'git commit -m ""' -
 - git push = upload git files to repo (GitHub)
 - git pull = download changes form remote repo to local host
 
+````
 git clone git@github.com:jzkarlovich/REPO
 cd REPO
 git init
@@ -33,6 +34,7 @@ git add .
 git commit -m "MESSAGE"
 git status
 git push origin main
+````
 
 ## Testing Section
 - [X] Trying to set ssh passphrase.  Started 'start-ssh-agent' after 'ssh-add'.
